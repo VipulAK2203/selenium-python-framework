@@ -3,7 +3,7 @@ from utils.driver_factory import get_driver
 
 @pytest.fixture(scope="session")
 def setup():
-    driver = get_driver()
+    driver = get_driver(headless=True)
     yield driver
     driver.quit()
-    
+
