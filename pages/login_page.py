@@ -16,3 +16,6 @@ class LoginPage:
 
     def get_error(self):
         return self.driver.find_element(*self.error_msg).is_displayed()
+
+    def check_logout_success(self):
+        return self.driver.find_element(*self.login_btn).is_displayed()
